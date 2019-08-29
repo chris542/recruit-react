@@ -3,9 +3,36 @@ nav {
   background: lightgray;
 }
 
+nav.opened .navList {
+  left: 0;
+}
+
 .navTitle {
   font-size: 2rem;
   text-align: center;
+}
+
+.navList {
+  position: absolute;
+  left: -100%;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transition: 0.6s left ease-in-out;
+  margin: 0;
+  padding: 1rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media screen and (min-width: 640px) {
+  .navList {
+    max-width: 400px;
+  }
+}
+
+.navList > li {
+  list-style: none;
 }
 
 .navIcon {

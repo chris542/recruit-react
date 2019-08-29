@@ -18,6 +18,9 @@ const Navigation: React.FC = props => {
           <span></span>
         </div>
         <div className="navTitle">{!isOpened ? 'Register card form' : 'Menu'}</div>
+        <ul className="navList">
+          <li>This is menu content</li>
+        </ul>
       </div>
     </nav>
   );
