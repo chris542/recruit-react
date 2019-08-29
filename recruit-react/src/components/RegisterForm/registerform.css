@@ -1,0 +1,33 @@
+.register-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0;
+  margin: auto;
+  max-width: 640px;
+}
+@media screen and (min-width: 640px) {
+  .register-form {
+  }
+}
+
+.register-form input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.register-form input[name='CVC'],
+.register-form input[name='expiry'] {
+  width: 33.33%;
+  margin-left: 1rem;
+}
+
+.register-form input[type='submit'] {
+  margin: 0;
+  color: black;
+  background: grey;
+}
