@@ -26,6 +26,33 @@ describe('<RegisterForm/>', function() {
     expect(form.find('.errorMessage').length).toBe(0);
   });
 
+  it('should have submit button disabled on load', function() {
+    expect(form.find('input[type="submit"]').props().disabled).toBeTruthy();
+  });
+
+  it('should have submit button disabled on one field filled', function() {
+    form.find('input[name="credit_card_number"]').prop('onChange')({
+      target: { name: 'credit_card_number', value: '123123' },
+    });
+    form.update();
+    expect(form.find('input[type="submit"]').props().disabled).toBeTruthy();
+  });
+
+  it('should have submit button enabled when input fields are filled', function() {
+    expect(form.find('input[type="submit"]').props().disabled).toBeTruthy();
+    form.find('input[name="credit_card_number"]').prop('onChange')({
+      target: { name: 'credit_card_number', value: '123123' },
+    });
+    form.find('input[name="CVC"]').prop('onChange')({
+      target: { name: 'CVC', value: '456456' },
+    });
+    form.find('input[name="expiry"]').prop('onChange')({
+      target: { name: 'expiry', value: '29/08/2019' },
+    });
+    form.update();
+    expect(form.find('input[type="submit"]').props().disabled).toBeFalsy();
+  });
+
   it('should show error message when submitted with empty input values', function() {
     form.simulate('submit', { preventDefault() {} });
     expect(form.find('.errorMessage').length).toBe(1);
