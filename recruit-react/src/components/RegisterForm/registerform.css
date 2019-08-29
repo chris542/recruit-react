@@ -7,6 +7,7 @@
   margin: auto;
   max-width: 640px;
 }
+
 @media screen and (min-width: 640px) {
   .register-form {
   }
@@ -17,7 +18,9 @@
   width: 100%;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
+  border: none;
   outline: none;
+  background: #ececec;
 }
 
 .register-form input[name='CVC'],
@@ -26,8 +29,40 @@
   margin-left: 1rem;
 }
 
+.register-form input:focus {
+  background: #d4d4d4;
+}
+
+.register-form input::placeholder,
+.register-form input[type='date']:invalid::-webkit-datetime-edit {
+  color: gray;
+}
+
+.register-form input[type='date'] {
+  cursor: pointer;
+}
+
+.register-form input[type='date']:before {
+  content: attr(placeholder);
+  color: gray;
+  width: 100%;
+}
+
+.register-form input[type='date']:valid:before,
+.register-form input[type='date']:focus:before {
+  content: '';
+  width: 0;
+}
+
 .register-form input[type='submit'] {
   margin: 0;
   color: black;
   background: grey;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.register-form input[type='submit']:hover {
+  color: white;
+  background: black;
 }
