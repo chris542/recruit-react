@@ -20,7 +20,7 @@
   margin-bottom: 1rem;
   border: none;
   outline: none;
-  background: #D6D6D6;
+  background: #d6d6d6;
 }
 
 .register-form input[name='CVC'],
@@ -64,6 +64,13 @@
 
 .register-form input[type='submit']:hover {
   background: #f6e486;
+}
+
+.register-form input[type='submit']:disabled,
+.register-form input[type='submit']:disabled:hover {
+  cursor: no-drop;
+  background: #fcbd1b;
+  color: grey;
 }
 
 .errorMessage {

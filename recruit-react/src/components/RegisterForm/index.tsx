@@ -85,7 +85,7 @@ const RegisterForm: React.FC = props => {
         placeholder="expiry"
         value={expiryValue}
       />
-      <input type="submit" />
+      <input type="submit" disabled={!creditValid || !cvcValid || !expiryValid} />
     </form>
   );
 };
