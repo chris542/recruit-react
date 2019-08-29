@@ -1,0 +1,14 @@
+nav {
+  position: relative;
+  background: lightgray;
+}
+
+nav.opened .navList {
+  left: 0;
+}
+
+.navTitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
