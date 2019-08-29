@@ -1,6 +1,7 @@
 nav {
   position: relative;
-  background: lightgray;
+  color: #fcbd1b;
+  background: black;
 }
 
 nav.opened .navList {
@@ -32,6 +33,7 @@ nav.opened .navList {
 }
 
 .navList > li {
+  color: black;
   list-style: none;
 }
 
@@ -49,7 +51,7 @@ nav.opened .navList {
   left: 0;
   top: 50%;
   width: 80%;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid white;
   border-radius: 100px;
   transition: 0.6s all ease-in-out;
 }

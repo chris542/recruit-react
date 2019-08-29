@@ -20,7 +20,7 @@
   margin-bottom: 1rem;
   border: none;
   outline: none;
-  background: #ececec;
+  background: #D6D6D6;
 }
 
 .register-form input[name='CVC'],
@@ -30,12 +30,12 @@
 }
 
 .register-form input:focus {
-  background: #d4d4d4;
+  background: #fff;
 }
 
 .register-form input::placeholder,
 .register-form input[type='date']:invalid::-webkit-datetime-edit {
-  color: gray;
+  color: #999;
 }
 
 .register-form input[type='date'] {
@@ -44,7 +44,7 @@
 
 .register-form input[type='date']:before {
   content: attr(placeholder);
-  color: gray;
+  color: #999;
   width: 100%;
 }
 
@@ -57,14 +57,13 @@
 .register-form input[type='submit'] {
   margin: 0;
   color: black;
-  background: grey;
+  background: #fcbd1b;
   cursor: pointer;
-  transition: 0.3s all ease-in-out;
+  transition: 0.3s background ease-in-out;
 }
 
 .register-form input[type='submit']:hover {
-  color: white;
-  background: black;
+  background: #f6e486;
 }
 
 .errorMessage {
