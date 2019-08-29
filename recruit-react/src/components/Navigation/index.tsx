@@ -13,7 +13,9 @@ const Navigation: React.FC = props => {
     <nav className={isOpened ? 'opened' : ''}>
       <div className="container">
         <div className={'navIcon'} onClick={handleClick}>
-                Button
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div className="navTitle">{!isOpened ? 'Register card form' : 'Menu'}</div>
       </div>

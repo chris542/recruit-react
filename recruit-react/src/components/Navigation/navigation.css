@@ -3,12 +3,47 @@ nav {
   background: lightgray;
 }
 
-nav.opened .navList {
-  left: 0;
-}
-
 .navTitle {
   font-size: 2rem;
   text-align: center;
 }
 
+.navIcon {
+  position: relative;
+  float: left;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.navIcon span {
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  top: 50%;
+  width: 80%;
+  border-bottom: 5px solid black;
+  border-radius: 100px;
+  transition: 0.6s all ease-in-out;
+}
+.navIcon span:first-child {
+  position: absolute;
+  top: 20%;
+}
+.navIcon span:last-child {
+  position: absolute;
+  top: 80%;
+}
+
+nav.opened .navIcon span:first-child {
+  width: 40%;
+  top: 55%;
+  transform-origin: left;
+  transform: rotate(-45deg);
+}
+nav.opened .navIcon span:last-child {
+  width: 40%;
+  top: 45%;
+  transform-origin: left;
+  transform: rotate(45deg);
+}
